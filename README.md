@@ -26,3 +26,9 @@
 15. 链表中倒数第k个结点（链表空，k小于1，k大于链表长度，两个指针）<a href="src/chapter3/T15FindKthToTail.java"  target="_blank">前往</a>
 16. 反转链表（链表空、只有一个节点）<a href="src/chapter3/T16ReverseList.java"  target="_blank">前往</a>
 17. 合并两个排序的链表（某个链表为空）<a href="src/chapter3/T17MergeList.java"  target="_blank">前往</a>
+18. 树的子结构（两步：根节点是否相等，是否是子结构）<a href="src/chapter3/T18HasSubtree.java"  target="_blank">前往</a>
+### 解决面试题的思路
+#### 面试官谈面试思路
+19. 二叉树的镜像（递归，交换左右节点）<a href="src/chapter4/T19MirrorBinaryTree.java"  target="_blank">前往</a>
+#### 画图让抽象问题形象化
+20. 顺时针打印数组（循环条件，每圈打印数组的边界条件）<a href="src/chapter4/T20PrintMatrixClockWisely.java"  target="_blank">前往</a>
