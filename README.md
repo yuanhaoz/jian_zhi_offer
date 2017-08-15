@@ -32,3 +32,8 @@
 19. 二叉树的镜像（递归，交换左右节点）<a href="src/chapter4/T19MirrorBinaryTree.java"  target="_blank">前往</a>
 #### 画图让抽象问题形象化
 20. 顺时针打印数组（循环条件，每圈打印数组的边界条件）<a href="src/chapter4/T20PrintMatrixClockWisely.java"  target="_blank">前往</a>
+#### 举例让抽象问题具体化
+21. 包含min函数的栈（利用辅助栈保存最小值）<a href="src/chapter4/T21MinStack.java"  target="_blank">前往</a>
+22. 栈的压入、弹出序列（熟悉入栈和出栈的过程）<a href="src/chapter4/T22IsPopOrder.java"  target="_blank">前往</a>
+23. 从上往下打印二叉树（对列，先进先出）<a href="src/chapter4/T23PrintFromTopToBottom.java"  target="_blank">前往</a>
+24. 二叉搜索树的后序遍历序列（二叉搜索树：左子树比根节点小，右子树比根节点大。后序遍历数组的特点）<a href="src/chapter4/T24VerifySequenceOfBST.java"  target="_blank">前往</a>
