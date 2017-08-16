@@ -37,3 +37,7 @@
 22. 栈的压入、弹出序列（熟悉入栈和出栈的过程）<a href="src/chapter4/T22IsPopOrder.java"  target="_blank">前往</a>
 23. 从上往下打印二叉树（对列，先进先出）<a href="src/chapter4/T23PrintFromTopToBottom.java"  target="_blank">前往</a>
 24. 二叉搜索树的后序遍历序列（二叉搜索树：左子树比根节点小，右子树比根节点大。后序遍历数组的特点）<a href="src/chapter4/T24VerifySequenceOfBST.java"  target="_blank">前往</a>
+25. 二叉树中和为某一值的路径（递归、栈、举例模拟计算过程）<a href="src/chapter4/T25FindPath.java"  target="_blank">前往</a>
+### 分解让复杂问题简单化（题目较为复杂，需要多加理解练习）
+26. 复杂链表的复制（三步：复制节点的next，复制节点的sibling，拆分链表）<a href="src/chapter4/T26CloneNodes.java"  target="_blank">前往</a>
+28. 字符串的排列（全排列、递归、回溯）<a href="src/chapter4/T28Permutation.java"  target="_blank">前往</a>
