@@ -40,4 +40,5 @@
 25. 二叉树中和为某一值的路径（递归、栈、举例模拟计算过程）<a href="src/chapter4/T25FindPath.java"  target="_blank">前往</a>
 ### 分解让复杂问题简单化（题目较为复杂，需要多加理解练习）
 26. 复杂链表的复制（三步：复制节点的next，复制节点的sibling，拆分链表）<a href="src/chapter4/T26CloneNodes.java"  target="_blank">前往</a>
+27. 二叉搜索树和双向链表（中序遍历、递归）<a href="src/chapter4/T27Convert.java"  target="_blank">前往</a>
 28. 字符串的排列（全排列、递归、回溯）<a href="src/chapter4/T28Permutation.java"  target="_blank">前往</a>
