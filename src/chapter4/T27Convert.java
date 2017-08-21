@@ -58,7 +58,7 @@ public class T27Convert {
                 lastNode[0].right = root;
             }
             lastNode[0] = root;
-            //
+            // 处理右子树
             if (root.right != null) {
                 convert(root.right, lastNode);
             }
