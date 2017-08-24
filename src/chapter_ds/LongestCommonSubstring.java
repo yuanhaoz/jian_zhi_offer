@@ -1,7 +1,8 @@
 package chapter_ds;
 
 /**
- *
+ * 最长公共子串
+ * 动态规划：求的最长子串长度和最后一个相同字符的下标即可
  * Created by 18710 on 2017/8/24.
  */
 public class LongestCommonSubstring {
@@ -13,7 +14,7 @@ public class LongestCommonSubstring {
     }
 
     /**
-     * 动态规划：状态为目前的最长子序列长度
+     * 动态规划：状态为目前的最长子串长度
      * lcs[i][j] = 0; if i == 0 || j == 0 || x[i]!=y[j]
      * lcs[i][j] = lcs[i-1][j-1] + 1; if x[i]=y[j]
      * @param x 第一个字符串
