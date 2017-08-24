@@ -51,3 +51,9 @@
 29. 数组中出现次数超过一半的数字（快排能改变数组O(n)、快速解法O(n)）<a href="src/chapter5/T29MoreThanHalfNum.java"  target="_blank">前往</a>
 30. 最小的k个数（快排能改变数组O(n)、最大堆和额外k空间O(nlogk)）<a href="src/chapter5/T30GetLeastNumbers.java"  target="_blank">前往</a>
 31. 连续子数组的最大和（举例分析数组规律、动态规划）<a href="src/chapter5/T31FindGreatestSumOfSubArray.java"  target="_blank">前往</a>
+
+
+### 面试参考算法题目
+1. 最长公共子序列（动态规划）<a href="src/chapter_ds/LongestCommonSubsequence.java"  target="_blank">前往</a>
+2. 最长公共子串（动态规划）<a href="src/chapter_ds/LongestCommonSubstring.java"  target="_blank">前往</a>
+3. 
