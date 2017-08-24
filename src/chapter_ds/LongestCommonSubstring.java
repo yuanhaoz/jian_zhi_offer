@@ -3,6 +3,9 @@ package chapter_ds;
 /**
  * 最长公共子串
  * 动态规划：求的最长子串长度和最后一个相同字符的下标即可
+ * 参考链接：http://blog.csdn.net/hackbuteer1/article/details/6686931
+ *
+ *
  * Created by 18710 on 2017/8/24.
  */
 public class LongestCommonSubstring {

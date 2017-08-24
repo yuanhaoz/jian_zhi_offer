@@ -46,11 +46,18 @@
 27. 二叉搜索树和双向链表（中序遍历、递归）<a href="src/chapter4/T27Convert.java"  target="_blank">前往</a>
 28. 字符串的排列（全排列、递归、回溯）<a href="src/chapter4/T28Permutation.java"  target="_blank">前往</a>
 
-### 优化时间和空间效率
+### 优化时间和空间效率（题目较为复杂，需要多加理解练习）
 #### 时间效率
 29. 数组中出现次数超过一半的数字（快排能改变数组O(n)、快速解法O(n)）<a href="src/chapter5/T29MoreThanHalfNum.java"  target="_blank">前往</a>
 30. 最小的k个数（快排能改变数组O(n)、最大堆和额外k空间O(nlogk)）<a href="src/chapter5/T30GetLeastNumbers.java"  target="_blank">前往</a>
 31. 连续子数组的最大和（举例分析数组规律、动态规划）<a href="src/chapter5/T31FindGreatestSumOfSubArray.java"  target="_blank">前往</a>
+32. 从1到n整数中1出现的次数（最高位为1、其余位1、递归）<a href="src/chapter5/T32NumberOf1Between1AndN.java"  target="_blank">前往</a>
+33. 把数组排成最小的数（排序规则、快排、比较器）<a href="src/chapter5/T33PrintMinNumber.java"  target="_blank">前往</a>
+#### 时间效率与空间效率的平衡
+34. 丑数<a href="src/chapter5/.java"  target="_blank">前往</a>
+35. 第一个只出现一次的字符<a href="src/chapter5/.java"  target="_blank">前往</a>
+36. 数组中的逆序对<a href="src/chapter5/.java"  target="_blank">前往</a>
+37. 两个链表的第一个公共节点<a href="src/chapter5/.java"  target="_blank">前往</a>
 
 
 ### 面试参考算法题目
