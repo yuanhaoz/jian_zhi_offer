@@ -54,10 +54,10 @@
 32. 从1到n整数中1出现的次数（最高位为1、其余位1、递归）<a href="src/chapter5/T32NumberOf1Between1AndN.java"  target="_blank">前往</a>
 33. 把数组排成最小的数（排序规则、快排、比较器）<a href="src/chapter5/T33PrintMinNumber.java"  target="_blank">前往</a>
 #### 时间效率与空间效率的平衡
-34. 丑数<a href="src/chapter5/.java"  target="_blank">前往</a>
-35. 第一个只出现一次的字符<a href="src/chapter5/.java"  target="_blank">前往</a>
-36. 数组中的逆序对<a href="src/chapter5/.java"  target="_blank">前往</a>
-37. 两个链表的第一个公共节点<a href="src/chapter5/.java"  target="_blank">前往</a>
+34. 丑数（数组保存已找到的数组、四个指针）<a href="src/chapter5/T34IsUgly.java"  target="_blank">前往</a>
+35. 第一个只出现一次的字符（TreeMap保存字符及其出现次数、保证顺序）<a href="src/chapter5/T35FirstNotRepeatingChar.java"  target="_blank">前往</a>
+36. 数组中的逆序对（归并排序、辅助数组保存排序元素）<a href="src/chapter5/T36InversePairs.java"  target="_blank">前往</a>
+37. 两个链表的第一个公共节点（辅助栈、先求长度差然后同时走直到第一次相遇）<a href="src/chapter5/T37FindFirstCommonNode.java"  target="_blank">前往</a>
 
 
 ### 面试参考算法题目
