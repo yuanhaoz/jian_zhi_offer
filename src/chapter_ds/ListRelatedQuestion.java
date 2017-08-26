@@ -84,4 +84,23 @@ public class ListRelatedQuestion {
         }
         return head;
     }
+
+    /**
+     * 2、求单链表中节点的个数：
+     * 注意检查链表是否为空。时间复杂度为O（n）。这个比较简单。
+     * @return
+     */
+    public static int getLength(ListNode head) {
+        if (head == null) {
+            return 0;
+        }
+        int length = 0;
+        ListNode current = head;
+        while (current != null) { // 当前元素不为空
+            length++;
+            current = current.next;
+        }
+        return length;
+    }
+    
 }
