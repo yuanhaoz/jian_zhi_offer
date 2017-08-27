@@ -59,6 +59,11 @@
 36. 数组中的逆序对（归并排序、辅助数组保存排序元素）<a href="src/chapter5/T36InversePairs.java"  target="_blank">前往</a>
 37. 两个链表的第一个公共节点（辅助栈、先求长度差然后同时走直到第一次相遇）<a href="src/chapter5/T37FindFirstCommonNode.java"  target="_blank">前往</a>
 
+### 面试中的各项技能（题目较为复杂，需要多加理解练习）
+#### 知识迁移能力
+38. 数字在排序数组中出现的次数（二分查找得到第一个k的下标和最后一个k的下标）<a href="src/chapter6/T38GetNumberOfK.java"  target="_blank">前往</a>
+39. 二叉树的深度+是否为平衡二叉树（递归遍历）<a href="src/chapter6/T39TreeDepth.java"  target="_blank">前往</a>
+
 
 ### 面试参考算法题目
 1. 最长公共子序列（动态规划）<a href="src/chapter_ds/LongestCommonSubsequence.java"  target="_blank">前往</a>
