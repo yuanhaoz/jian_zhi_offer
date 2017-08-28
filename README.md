@@ -63,6 +63,11 @@
 #### 知识迁移能力
 38. 数字在排序数组中出现的次数（二分查找得到第一个k的下标和最后一个k的下标）<a href="src/chapter6/T38GetNumberOfK.java"  target="_blank">前往</a>
 39. 二叉树的深度+是否为平衡二叉树（递归遍历）<a href="src/chapter6/T39TreeDepth.java"  target="_blank">前往</a>
+40. 数组中只出现一次的数字（异或、根据结果位1分成两个数组再求异或）<a href="src/chapter6/T40FindNumsAppearOnce.java"  target="_blank">前往</a>
+41. 和为s的两个数字+和为s的连续正数序列（两个指针、首尾、首首）<a href="src/chapter6/T41FindNumbersWithSum.java"  target="_blank">前往</a>
+42. 翻转单词顺序VS左旋转字符串（整体旋转、部分旋转）<a href="src/chapter6/T42ReverseSentence.java"  target="_blank">前往</a>
+#### 抽象建模能力
+43. n个骰子的点数 <a href="src/chapter6/.java"  target="_blank">前往</a>
 
 
 ### 面试参考算法题目
