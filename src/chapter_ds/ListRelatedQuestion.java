@@ -103,4 +103,55 @@ public class ListRelatedQuestion {
         return length;
     }
 
+    /**
+     * 3、查找单链表中的倒数第k个结点（剑指offer，题15）
+     * 这里需要声明两个指针：即两个结点型的变量first和second，首先让first和second都指向第一个结点，然后让second结点往后挪k-1个位置，
+     * 此时first和second就间隔了k-1个位置，然后整体向后移动这两个节点，直到second节点走到最后一个结点的时候，
+     * 此时first节点所指向的位置就是倒数第k个节点的位置。时间复杂度为O（n）
+     *
+     * 考虑k=0和k大于链表长度的情况
+     */
+    public static ListNode findLastNode(ListNode head, int k){
+        if (head == null || k <= 0) { // 输入异常
+            throw new RuntimeException("输入参数格式不对...");
+        }
+        ListNode first = head; // 两个指针
+        ListNode second = head;
+        for (int i = 0; i < k - 1; i++) {
+            second = second.next;
+            if (second == null) { // 说明k的值大于链表的长度
+                throw new RuntimeException("k越界");
+            }
+        }
+        // 两个指针同时移动，second到达尾节点时，first是倒数第k个节点
+        while (second.next != null) {
+            first = first.next;
+            second = second.next;
+        }
+        return first;
+    }
+
+    /**
+     * 4、查找单链表中的中间结点：
+     * 同样，面试官不允许你算出链表的长度，该怎么做呢？
+     * 思路：和上面的第2节一样，也是设置两个指针first和second，只不过这里是，两个指针同时向前走，
+     * second指针每次走两步，first指针每次走一步，直到second指针走到最后一个结点时，
+     * 此时first指针所指的结点就是中间结点。
+     * 注意链表为空，链表结点个数为1和2的情况。时间复杂度为O（n）。
+     *
+     * 上方代码中，当n为偶数时，得到的中间结点是第n/2个结点。比如链表有6个节点时，得到的是第3个节点。
+     */
+    public static ListNode findMidNode(ListNode head){
+        if (head == null || head.next == null || head.next.next == null) {
+            return null;
+        }
+        ListNode first = head;
+        ListNode second = head;
+        while (second.next != null && second.next.next != null) {
+            first = first.next;
+            second = second.next.next;
+        }
+        return first;
+    }
+
 }
