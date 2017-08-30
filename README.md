@@ -67,7 +67,9 @@
 41. 和为s的两个数字+和为s的连续正数序列（两个指针、首尾、首首）<a href="src/chapter6/T41FindNumbersWithSum.java"  target="_blank">前往</a>
 42. 翻转单词顺序VS左旋转字符串（整体旋转、部分旋转）<a href="src/chapter6/T42ReverseSentence.java"  target="_blank">前往</a>
 #### 抽象建模能力
-43. n个骰子的点数 <a href="src/chapter6/.java"  target="_blank">前往</a>
+43. n个骰子的点数（递归求解每种情况的次数）<a href="src/chapter6/T43PrintProbability.java"  target="_blank">前往</a>
+44. 扑克牌的顺子（判断大小王的数量是否不小于需要补上大小王的数量） <a href="src/chapter6/T44IsContinuous.java"  target="_blank">前往</a>
+45. 圆圈中最后剩下的数字（链表每次删除第m个元素得到最后一个元素、数学推导） <a href="src/chapter6/T45LastRemaining.java"  target="_blank">前往</a>
 
 
 ### 面试参考算法题目
