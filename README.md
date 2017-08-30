@@ -3,7 +3,7 @@
 第XXX次和剑指XXX，我真的是XXX了
 ## 题目列表
 
-### 面试需要的基本知识
+### 第2章：面试需要的基本知识
 #### 编程语言 C++/C/Java
 1. 赋值运算符函数
 2. 实现Singleton模式（设计模式，参考）
@@ -18,7 +18,7 @@
 9. 斐波那契数列（递归和循环，递归解法的弊端）<a href="src/chapter2/T9Fibonacci.java"  target="_blank">前往</a>
 10. 二进制中1的个数（位运算，减1求与的次数）<a href="src/chapter2/T10NumberOf1.java"  target="_blank">前往</a>
 
-### 高质量的代码
+### 第3章：高质量的代码
 #### 代码的完整性
 11. 数值的整数次方（指数为负、数值为0等边界情况，递归解法）<a href="src/chapter3/T11Power.java"  target="_blank">前往</a>
 12. 打印1到最大的n位数（数组模拟、全排列、递归）<a href="src/chapter3/T12PrintOneToNthDigits.java"  target="_blank">前往</a>
@@ -30,7 +30,7 @@
 17. 合并两个排序的链表（某个链表为空）<a href="src/chapter3/T17MergeList.java"  target="_blank">前往</a>
 18. 树的子结构（两步：根节点是否相等，是否是子结构）<a href="src/chapter3/T18HasSubtree.java"  target="_blank">前往</a>
 
-### 解决面试题的思路
+### 第4章：解决面试题的思路
 #### 面试官谈面试思路
 19. 二叉树的镜像（递归，交换左右节点）<a href="src/chapter4/T19MirrorBinaryTree.java"  target="_blank">前往</a>
 #### 画图让抽象问题形象化
@@ -46,7 +46,7 @@
 27. 二叉搜索树和双向链表（中序遍历、递归）<a href="src/chapter4/T27Convert.java"  target="_blank">前往</a>
 28. 字符串的排列（全排列、递归、回溯）<a href="src/chapter4/T28Permutation.java"  target="_blank">前往</a>
 
-### 优化时间和空间效率（题目较为复杂，需要多加理解练习）
+### 第5章：优化时间和空间效率（题目较为复杂，需要多加理解练习）
 #### 时间效率
 29. 数组中出现次数超过一半的数字（快排能改变数组O(n)、快速解法O(n)）<a href="src/chapter5/T29MoreThanHalfNum.java"  target="_blank">前往</a>
 30. 最小的k个数（快排能改变数组O(n)、最大堆和额外k空间O(nlogk)）<a href="src/chapter5/T30GetLeastNumbers.java"  target="_blank">前往</a>
@@ -59,7 +59,7 @@
 36. 数组中的逆序对（归并排序、辅助数组保存排序元素）<a href="src/chapter5/T36InversePairs.java"  target="_blank">前往</a>
 37. 两个链表的第一个公共节点（辅助栈、先求长度差然后同时走直到第一次相遇）<a href="src/chapter5/T37FindFirstCommonNode.java"  target="_blank">前往</a>
 
-### 面试中的各项技能（题目较为复杂，需要多加理解练习）
+### 第6章：面试中的各项技能（题目较为复杂，需要多加理解练习）
 #### 知识迁移能力
 38. 数字在排序数组中出现的次数（二分查找得到第一个k的下标和最后一个k的下标）<a href="src/chapter6/T38GetNumberOfK.java"  target="_blank">前往</a>
 39. 二叉树的深度+是否为平衡二叉树（递归遍历）<a href="src/chapter6/T39TreeDepth.java"  target="_blank">前往</a>
