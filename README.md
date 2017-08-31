@@ -70,9 +70,16 @@
 43. n个骰子的点数（递归求解每种情况的次数）<a href="src/chapter6/T43PrintProbability.java"  target="_blank">前往</a>
 44. 扑克牌的顺子（判断大小王的数量是否不小于需要补上大小王的数量） <a href="src/chapter6/T44IsContinuous.java"  target="_blank">前往</a>
 45. 圆圈中最后剩下的数字（链表每次删除第m个元素得到最后一个元素、数学推导） <a href="src/chapter6/T45LastRemaining.java"  target="_blank">前往</a>
+#### 发散思维能力
+46. 求1+2+...+n（函数递归调用） <a href="src/chapter6/T46Sum.java"  target="_blank">前往</a>
+47. 不用加减乘除做加法（位运算、异或和与运算加循环、异或实现无进位加+与运算实现求进位+再循环求两个结果的和） <a href="src/chapter6/T47Add.java"  target="_blank">前往</a>
+48. 不能被继承的类（C相关，_省略_） <a href="src/chapter6/T48SealedClass.java"  target="_blank">前往</a>
 
+### 第7章：两个面试案例
+49. 把字符串转换为整数（考虑字符串中存在非法字符、第一个字符为'+'或'-'或数字的情况等） <a href="src/chapter7/T49StringToInt.java"  target="_blank">前往</a>
+50. 树中两个结点的最低公共祖先（四种场景：a. 二叉搜索树->二分搜索法; b. 普通树+指向父节点指针->两个链表第一个相交的节点; c. 普通树->递归左右子树判断 d. 普通树->辅助空间、两个链表保存根节点到指定节点的路径，最后一个相同的节点就是最低公共祖先节点） <a href="src/chapter7/T50GetLastCommonParent.java"  target="_blank">前往</a>
 
-### 面试参考算法题目
+### 附加：面试参考算法题目
 1. 最长公共子序列（动态规划）<a href="src/chapter_ds/LongestCommonSubsequence.java"  target="_blank">前往</a>
 2. 最长公共子串（动态规划）<a href="src/chapter_ds/LongestCommonSubstring.java"  target="_blank">前往</a>
 3. 链表相关的考题：单链表反转，是否有环等等 <a href="src/chapter_ds/LongestCommonSubstring.java"  target="_blank">前往</a>
