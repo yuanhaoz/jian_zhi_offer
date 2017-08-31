@@ -3,7 +3,7 @@
 第XXX次和剑指XXX，我真的是XXX了
 ## 题目列表
 
-### 面试需要的基本知识
+### 第2章：面试需要的基本知识
 #### 编程语言 C++/C/Java
 1. 赋值运算符函数
 2. 实现Singleton模式（设计模式，参考）
@@ -18,7 +18,7 @@
 9. 斐波那契数列（递归和循环，递归解法的弊端）<a href="src/chapter2/T9Fibonacci.java"  target="_blank">前往</a>
 10. 二进制中1的个数（位运算，减1求与的次数）<a href="src/chapter2/T10NumberOf1.java"  target="_blank">前往</a>
 
-### 高质量的代码
+### 第3章：高质量的代码
 #### 代码的完整性
 11. 数值的整数次方（指数为负、数值为0等边界情况，递归解法）<a href="src/chapter3/T11Power.java"  target="_blank">前往</a>
 12. 打印1到最大的n位数（数组模拟、全排列、递归）<a href="src/chapter3/T12PrintOneToNthDigits.java"  target="_blank">前往</a>
@@ -30,7 +30,7 @@
 17. 合并两个排序的链表（某个链表为空）<a href="src/chapter3/T17MergeList.java"  target="_blank">前往</a>
 18. 树的子结构（两步：根节点是否相等，是否是子结构）<a href="src/chapter3/T18HasSubtree.java"  target="_blank">前往</a>
 
-### 解决面试题的思路
+### 第4章：解决面试题的思路
 #### 面试官谈面试思路
 19. 二叉树的镜像（递归，交换左右节点）<a href="src/chapter4/T19MirrorBinaryTree.java"  target="_blank">前往</a>
 #### 画图让抽象问题形象化
@@ -46,7 +46,7 @@
 27. 二叉搜索树和双向链表（中序遍历、递归）<a href="src/chapter4/T27Convert.java"  target="_blank">前往</a>
 28. 字符串的排列（全排列、递归、回溯）<a href="src/chapter4/T28Permutation.java"  target="_blank">前往</a>
 
-### 优化时间和空间效率（题目较为复杂，需要多加理解练习）
+### 第5章：优化时间和空间效率（题目较为复杂，需要多加理解练习）
 #### 时间效率
 29. 数组中出现次数超过一半的数字（快排能改变数组O(n)、快速解法O(n)）<a href="src/chapter5/T29MoreThanHalfNum.java"  target="_blank">前往</a>
 30. 最小的k个数（快排能改变数组O(n)、最大堆和额外k空间O(nlogk)）<a href="src/chapter5/T30GetLeastNumbers.java"  target="_blank">前往</a>
@@ -59,7 +59,7 @@
 36. 数组中的逆序对（归并排序、辅助数组保存排序元素）<a href="src/chapter5/T36InversePairs.java"  target="_blank">前往</a>
 37. 两个链表的第一个公共节点（辅助栈、先求长度差然后同时走直到第一次相遇）<a href="src/chapter5/T37FindFirstCommonNode.java"  target="_blank">前往</a>
 
-### 面试中的各项技能（题目较为复杂，需要多加理解练习）
+### 第6章：面试中的各项技能（题目较为复杂，需要多加理解练习）
 #### 知识迁移能力
 38. 数字在排序数组中出现的次数（二分查找得到第一个k的下标和最后一个k的下标）<a href="src/chapter6/T38GetNumberOfK.java"  target="_blank">前往</a>
 39. 二叉树的深度+是否为平衡二叉树（递归遍历）<a href="src/chapter6/T39TreeDepth.java"  target="_blank">前往</a>
@@ -70,9 +70,16 @@
 43. n个骰子的点数（递归求解每种情况的次数）<a href="src/chapter6/T43PrintProbability.java"  target="_blank">前往</a>
 44. 扑克牌的顺子（判断大小王的数量是否不小于需要补上大小王的数量） <a href="src/chapter6/T44IsContinuous.java"  target="_blank">前往</a>
 45. 圆圈中最后剩下的数字（链表每次删除第m个元素得到最后一个元素、数学推导） <a href="src/chapter6/T45LastRemaining.java"  target="_blank">前往</a>
+#### 发散思维能力
+46. 求1+2+...+n（函数递归调用） <a href="src/chapter6/T46Sum.java"  target="_blank">前往</a>
+47. 不用加减乘除做加法（位运算、异或和与运算加循环、异或实现无进位加+与运算实现求进位+再循环求两个结果的和） <a href="src/chapter6/T47Add.java"  target="_blank">前往</a>
+48. 不能被继承的类（C相关，_省略_） <a href="src/chapter6/T48SealedClass.java"  target="_blank">前往</a>
 
+### 第7章：两个面试案例
+49. 把字符串转换为整数（考虑字符串中存在非法字符、第一个字符为'+'或'-'或数字的情况等） <a href="src/chapter7/T49StringToInt.java"  target="_blank">前往</a>
+50. 树中两个结点的最低公共祖先（四种场景：a. 二叉搜索树->二分搜索法; b. 普通树+指向父节点指针->两个链表第一个相交的节点; c. 普通树->递归左右子树判断 d. 普通树->辅助空间、两个链表保存根节点到指定节点的路径，最后一个相同的节点就是最低公共祖先节点） <a href="src/chapter7/T50GetLastCommonParent.java"  target="_blank">前往</a>
 
-### 面试参考算法题目
+### 附加：面试参考算法题目
 1. 最长公共子序列（动态规划）<a href="src/chapter_ds/LongestCommonSubsequence.java"  target="_blank">前往</a>
 2. 最长公共子串（动态规划）<a href="src/chapter_ds/LongestCommonSubstring.java"  target="_blank">前往</a>
 3. 链表相关的考题：单链表反转，是否有环等等 <a href="src/chapter_ds/LongestCommonSubstring.java"  target="_blank">前往</a>

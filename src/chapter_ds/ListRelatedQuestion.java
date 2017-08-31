@@ -154,4 +154,14 @@ public class ListRelatedQuestion {
         return first;
     }
 
+    /**
+     * 5、合并两个有序的单链表，合并之后的链表依然有序【出现频率高】（剑指offer，题17）
+     *  这道题经常被各公司考察。例如：链表1：　　1->2->3->4            链表2：      2->3->4->5              合并后： 1->2->2->3->3->4->4->5
+     *  解题思路：挨着比较链表1和链表2。这个类似于归并排序。尤其要注意两个链表都为空、和其中一个为空的情况。
+     *  只需要O(1)的空间。时间复杂度为O (max(len1,len2))
+     */
+//    public static ListNode mergeLinkList(ListNode head1, ListNode head2) {
+//
+//    }
+
 }
