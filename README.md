@@ -79,7 +79,26 @@
 49. 把字符串转换为整数（考虑字符串中存在非法字符、第一个字符为'+'或'-'或数字的情况等） <a href="src/chapter7/T49StringToInt.java"  target="_blank">前往</a>
 50. 树中两个结点的最低公共祖先（四种场景：a. 二叉搜索树->二分搜索法; b. 普通树+指向父节点指针->两个链表第一个相交的节点; c. 普通树->递归左右子树判断 d. 普通树->辅助空间、两个链表保存根节点到指定节点的路径，最后一个相同的节点就是最低公共祖先节点） <a href="src/chapter7/T50GetLastCommonParent.java"  target="_blank">前往</a>
 
-### 附加：面试参考算法题目
+### 附加1：排序算法/查找算法（chapter_sort）
+#### 基本算法（时间复杂度为 n^2）
+1. 冒泡排序（稳定；时间复杂度：最好为 O(n^2)，最差为 O(n^2)，平均为 O(n^2)；空间复杂度：O(1)，选择排序的一种）<a href="src/chapter_sort/BubbleSort.java"  target="_blank">前往</a>
+2. 选择排序（不稳定；时间复杂度：最好为 O(n^2)，最差为 O(n^2)，平均为 O(n^2)；空间复杂度：O(1)）<a href="src/chapter_sort/SelectSort.java"  target="_blank">前往</a>
+3. 插入排序（稳定；时间复杂度：最好为 O(n^2)，最差为 O(n^2)，平均为 O(n^2)；空间复杂度：O(1)）<a href="src/chapter_sort/InsertSort.java"  target="_blank">前往</a>
+#### 快速算法（时间复杂度为 nlogn）
+4. 快速排序（不稳定；时间复杂度：最好为 O(nlogn)，最差为 O(n^2)，平均为 O(nlogn)；空间复杂度：O(logn)，基于冒泡排序 + 二分 + 递归分治）<a href="src/chapter_sort/QuickSort.java"  target="_blank">前往</a>
+5. 堆排序（不稳定；时间复杂度：最好为 O(nlogn)，最差为 O(nlogn)，平均为 O(nlogn)；空间复杂度：O(1)，基于选择排序）<a href="src/chapter_sort/HeapSort.java"  target="_blank">前往</a>
+6. 希尔排序（不稳定；时间复杂度：最好为 O(nlogn)，最差为 O(nlogn)，平均为 O(nlogn)；空间复杂度：O(1)，基于插入排序）<a href="src/chapter_sort/ShellSort.java"  target="_blank">前往</a>
+7. 归并排序（稳定；时间复杂度：最好为 O(nlogn)，最差为 O(nlogn)，平均为 O(nlogn)；空间复杂度：O(n)，基于递归分治）<a href="src/chapter_sort/MergeSort.java"  target="_blank">前往</a>
+#### 高级算法（时间复杂度为 n）
+8. 计数排序（稳定；时间复杂度：最好为 O(n+k)，最差为 O(n+k)，平均为 O(n+k)；空间复杂度：O(n+k)）<a href="src/chapter_sort/CountSort.java"  target="_blank">前往</a>
+9. 桶排序（稳定；时间复杂度：最好为 O(n)，最差为 O(nlogn)，平均为 O(n+c)；空间复杂度：O(n+m)）<a href="src/chapter_sort/BucketSort.java"  target="_blank">前往</a>
+10. 基数排序（稳定；时间复杂度：最好为 O(d(n+r))，最差为 O(d(n+r))，平均为 O(d(n+r))；空间复杂度：O(r)）<a href="src/chapter_sort/RadixSort.java"  target="_blank">前往</a>
+
+### 附加2：数据结构相关算法题（chapter_ds）
 1. 最长公共子序列（动态规划）<a href="src/chapter_ds/LongestCommonSubsequence.java"  target="_blank">前往</a>
 2. 最长公共子串（动态规划）<a href="src/chapter_ds/LongestCommonSubstring.java"  target="_blank">前往</a>
 3. 链表相关的考题：单链表反转，是否有环等等 <a href="src/chapter_ds/LongestCommonSubstring.java"  target="_blank">前往</a>
+
+### 附加3：面试中常问/手写的算法（chapter_freq）
+1. 求一个数的平方根（二分法 t=c/t）<a href="src/chapter_freq/SqrtAlgorithm.java"  target="_blank">前往</a>
+2. 微信抢红包算法（红包类的设计）<a href="src/chapter_freq/WeiChatRedPacket.java"  target="_blank">前往</a>
