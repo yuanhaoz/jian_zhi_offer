@@ -81,9 +81,9 @@
 
 ### 附加1：排序算法/查找算法（chapter_sort）
 #### 基本算法（时间复杂度为 n^2）
-1. 冒泡排序（稳定；时间复杂度：最好为 O(n^2)，最差为 O(n^2)，平均为 O(n^2)；空间复杂度：O(1)，选择排序的一种）<a href="src/chapter_sort/BubbleSort.java"  target="_blank">前往</a>
+1. 冒泡排序（稳定；时间复杂度：最好为 O(n)，最差为 O(n^2)，平均为 O(n^2)；空间复杂度：O(1)，选择排序的一种）<a href="src/chapter_sort/BubbleSort.java"  target="_blank">前往</a>
 2. 选择排序（不稳定；时间复杂度：最好为 O(n^2)，最差为 O(n^2)，平均为 O(n^2)；空间复杂度：O(1)）<a href="src/chapter_sort/SelectSort.java"  target="_blank">前往</a>
-3. 插入排序（稳定；时间复杂度：最好为 O(n^2)，最差为 O(n^2)，平均为 O(n^2)；空间复杂度：O(1)）<a href="src/chapter_sort/InsertSort.java"  target="_blank">前往</a>
+3. 插入排序（稳定；时间复杂度：最好为 O(n)，最差为 O(n^2)，平均为 O(n^2)；空间复杂度：O(1)）<a href="src/chapter_sort/InsertSort.java"  target="_blank">前往</a>
 #### 快速算法（时间复杂度为 nlogn）
 4. 快速排序（不稳定；时间复杂度：最好为 O(nlogn)，最差为 O(n^2)，平均为 O(nlogn)；空间复杂度：O(logn)，基于冒泡排序 + 二分 + 递归分治）<a href="src/chapter_sort/QuickSort.java"  target="_blank">前往</a>
 5. 堆排序（不稳定；时间复杂度：最好为 O(nlogn)，最差为 O(nlogn)，平均为 O(nlogn)；空间复杂度：O(1)，基于选择排序）<a href="src/chapter_sort/HeapSort.java"  target="_blank">前往</a>
