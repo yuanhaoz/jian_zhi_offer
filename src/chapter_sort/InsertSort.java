@@ -40,7 +40,9 @@ public class InsertSort {
                 arr[j] = arr[j - 1];
                 j--;
             }
-            arr[j] = target; // 插入元素
+            if (j != i) {
+                arr[j] = target; // 插入target数字到数组中
+            }
         }
     }
 

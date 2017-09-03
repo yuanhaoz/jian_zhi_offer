@@ -40,26 +40,39 @@ public class QuickSort {
         quickSort(arr, 0, arr.length - 1);
     }
 
+    /**
+     * 快速排序
+     * @param arr 数组
+     * @param left 左指针
+     * @param right 右指针
+     */
     public static void quickSort(int[] arr, int left, int right) {
         if (left > right) {
             return;
         }
-        int pos = partition(arr, left, right);
-        quickSort(arr, left, pos - 1);
+        int pos = partition(arr, left, right); // 每次得到基准值的位置
+        quickSort(arr, left, pos - 1); // 分别对数组的左右子数组重复快排调用
         quickSort(arr, pos + 1, right);
     }
 
+    /**
+     * 每次得到基准值下标，并进行一次排序
+     * @param arr 数组
+     * @param left 左指针
+     * @param right 右指针
+     * @return 基准值下标
+     */
     public static int partition(int[] arr, int left, int right) {
-        int temp = arr[left];
+        int temp = arr[left]; // 保存基准值
         while (left < right) {
-            while (left < right && arr[right] > temp) {
+            while (left < right && arr[right] > temp) { // 从右向左开始循环遍历
                 right--;
             }
-            arr[left] = arr[right];
-            while (left < right && arr[left] < temp) {
+            arr[left] = arr[right]; // 左边的值都比基准值小
+            while (left < right && arr[left] < temp) { // 从左向右开始循环遍历
                 left++;
             }
-            arr[right] = arr[left];
+            arr[right] = arr[left]; // 右边的值都比基准值大
         }
         arr[left] = temp;
         return left;
