@@ -2,6 +2,8 @@ package chapter_ds;
 
 import bean.ListNode;
 
+import java.util.Stack;
+
 /**
  * 包含链表的以下内容：
  * 1、单链表的创建和遍历
@@ -20,6 +22,12 @@ import bean.ListNode;
  */
 public class ListRelatedQuestion {
 
+    /**
+     * 以 k 个节点为段，反转单链表。Reverse Nodes in k_Group，Leetcode上的算法题，第6题的高级变种
+     * @param head 链表头结点
+     * @param k 每k个节点反转
+     * @return 反转后的链表头
+     */
     public static ListNode reverseKGroup(ListNode head, int k) {
         if (head == null || k <= 1) {
             return head;
@@ -63,6 +71,12 @@ public class ListRelatedQuestion {
         return newHead;
     }
 
+    /**
+     * 以 k 个节点为段，反转单链表。Reverse Nodes in k_Group，Leetcode上的算法题，第6题的高级变种
+     * @param head 链表头结点
+     * @param k 每k个节点反转
+     * @return 反转后的链表头
+     */
     public static ListNode reverseKGroup2(ListNode head, int k) {
         ListNode curr = null;
         int count = 0;
@@ -88,7 +102,8 @@ public class ListRelatedQuestion {
     /**
      * 2、求单链表中节点的个数：
      * 注意检查链表是否为空。时间复杂度为O（n）。这个比较简单。
-     * @return
+     * @param head 链表头结点
+     * @return 链表中节点的个数
      */
     public static int getLength(ListNode head) {
         if (head == null) {
@@ -110,6 +125,9 @@ public class ListRelatedQuestion {
      * 此时first节点所指向的位置就是倒数第k个节点的位置。时间复杂度为O（n）
      *
      * 考虑k=0和k大于链表长度的情况
+     * @param head 链表头结点
+     * @param k 倒数第k
+     * @return 倒数第k个节点
      */
     public static ListNode findLastNode(ListNode head, int k){
         if (head == null || k <= 0) { // 输入异常
@@ -140,6 +158,8 @@ public class ListRelatedQuestion {
      * 注意链表为空，链表结点个数为1和2的情况。时间复杂度为O（n）。
      *
      * 上方代码中，当n为偶数时，得到的中间结点是第n/2个结点。比如链表有6个节点时，得到的是第3个节点。
+     * @param head 链表头结点
+     * @return 中间节点
      */
     public static ListNode findMidNode(ListNode head){
         if (head == null || head.next == null || head.next.next == null) {
@@ -156,12 +176,273 @@ public class ListRelatedQuestion {
 
     /**
      * 5、合并两个有序的单链表，合并之后的链表依然有序【出现频率高】（剑指offer，题17）
-     *  这道题经常被各公司考察。例如：链表1：　　1->2->3->4            链表2：      2->3->4->5              合并后： 1->2->2->3->3->4->4->5
+     *  这道题经常被各公司考察。例如：链表1：1->2->3->4    链表2：2->3->4->5    合并后：1->2->2->3->3->4->4->5
      *  解题思路：挨着比较链表1和链表2。这个类似于归并排序。尤其要注意两个链表都为空、和其中一个为空的情况。
      *  只需要O(1)的空间。时间复杂度为O (max(len1,len2))
+     * @param head1 链表1头结点
+     * @param head2 链表2头结点
+     * @return 合并后的链表头结点
      */
-//    public static ListNode mergeLinkList(ListNode head1, ListNode head2) {
-//
-//    }
+    public static ListNode mergeLinkList(ListNode head1, ListNode head2) {
+        // 第一个链表为空
+        if (head1 == null) {
+            return head2;
+        }
+        // 第二个链表为空
+        if (head2 == null) {
+            return head1;
+        }
+        // 设置链表头结点
+        ListNode head = new ListNode(-1);
+        ListNode temp = head;
+        while (head1 != null && head2 != null) {
+            if (head1.val < head2.val) { // 链表1的元素小于链表2的元素
+                temp.next = head1;
+                head1 = head1.next;
+            } else {
+                temp.next = head2;
+                head2 = head2.next;
+            }
+            temp = temp.next;
+        }
+        // 链表1没有遍历结束
+        if (head1 != null) {
+            temp.next = head1;
+        }
+        // 链表2没有遍历结束
+        if (head2 != null) {
+            temp.next = head2;
+        }
+        return head.next; // 返回空节点的下一个节点
+    }
+
+    /**
+     * 6、单链表的反转：【出现频率最高】（不使用额外的空间）
+     * 例如链表：1->2->3->4     反转之后：4->3->2->1
+     * 思路：从头到尾遍历原链表，每遍历一个结点，将其摘下放在新链表的最前端。
+     * 注意链表为空和只有一个结点的情况。时间复杂度为O（n）
+     * @param head 链表头结点
+     * @return 链表反转后的头结点
+     */
+    public static ListNode reverseList(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+        ListNode newHead = null; // 保存链表新表头
+        ListNode current = head; // 保存当前链表的遍历节点
+        while (current != null) {
+            ListNode next = current.next; // 保存当前节点的下一个节点
+            current.next = newHead;
+            newHead = current;
+            current = next;
+        }
+        return newHead;
+    }
+
+    /**
+     * 7、从尾到头打印单链表
+     * 用递归实现，但有个问题：当链表很长的时候，就会导致方法调用的层级很深，有可能造成栈溢出。
+     * 注意链表为空的情况。时间复杂度为O（n）
+     * @param head 链表头结点
+     */
+    public static void reversePrint(ListNode head) {
+        if (head == null) {
+            return;
+        }
+        reversePrint(head.next);
+        System.out.print(head.val + "->");
+    }
+
+    /**
+     * 7、从尾到头打印单链表
+     * 对于这种颠倒顺序的问题，我们应该就会想到栈，后进先出。
+     * 显式用栈，是基于循环实现的，代码的鲁棒性要更好一些。
+     * 注意链表为空的情况。时间复杂度为O（n）
+     * @param head 链表头结点
+     */
+    public static void reversePrintByStack(ListNode head) {
+        if (head == null) {
+            return;
+        }
+        Stack<ListNode> stack = new Stack<>();
+        while (head != null) { // 将链表元素压入栈中
+            stack.add(head);
+            head = head.next;
+        }
+        while (!stack.isEmpty()) { // 将链表元素出栈打印
+            System.out.print(stack.pop().val + "->");
+        }
+    }
+
+    /**
+     * 8、判断单链表是否有环：
+     * 这里也是用到两个指针，如果一个链表有环，那么用一个指针去遍历，是永远走不到头的。
+     * 因此，我们用两个指针去遍历：first指针每次走一步，second指针每次走两步，
+     * 如果first指针和second指针相遇，说明有环。时间复杂度为O (n)。
+     * @param head 链表头结点
+     * @return 是否存在环
+     */
+    public static boolean hasCycle(ListNode head) {
+        if (head == null || head.next == null) {
+            return false;
+        }
+        ListNode first = head; // 每次移动一步
+        ListNode second = head; // 每次移动两步
+        while (second != null && second.next != null) { // 判断空指针
+            first = first.next;
+            second = second.next.next;
+            if (first == second) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * 9、取出有环链表中，环的长度：从开始到相遇处first走的步数
+     * @param head 链表头结点
+     * @return 环的长度
+     */
+    public static int getCycleLength(ListNode head){
+        if (head == null || head.next == null) {
+            return 0;
+        }
+        int length = 0; // 环的长度
+        ListNode first = head; // 每次移动一步
+        ListNode second = head; // 每次移动两步
+        while (second != null && second.next != null) { // 判断空指针
+            first = first.next;
+            second = second.next.next;
+            length++;
+            if (first == second) {
+                return length;
+            }
+        }
+        return 0;
+    }
+
+    /**
+     * 10、单链表中，取出环的起始点：从相遇点开始，设置一个节点从头开始，然后最终相遇的节点就是环的起始点。
+     * @param head 链表头结点
+     * @return 链表中环的起始节点
+     */
+    public static ListNode getCycleStart(ListNode head) {
+        if (head == null || head.next == null) {
+            return null;
+        }
+        ListNode first = head; // 每次移动一步
+        ListNode second = head; // 每次移动两步
+        while (second != null && second.next != null) { // 判断空指针
+            first = first.next;
+            second = second.next.next;
+            if (first == second) {
+                ListNode temp = head;
+                while (temp != second) {
+                    temp = temp.next;
+                    second = second.next;
+                }
+                return second;
+            }
+        }
+        return null;
+    }
+
+    /**
+     * 11、判断两个单链表相交的第一个交点。 剑指offer，题37。
+     * 先遍历两个链表得到长度差，让长的链表先走长度差步，然后再同时走相遇的第一个节点就是返回结果。
+     * 时间复杂度为：O(m+n)
+     * @param head1 链表1头结点
+     * @param head2 链表2头结点
+     * @return 相交的第一个节点
+     */
+    public static ListNode meetNode(ListNode head1, ListNode head2){
+        if (head1 == null || head2 == null) {
+            return null;
+        }
+        int len1 = 0;
+        int len2 = 0;
+        ListNode temp1 = head1;
+        ListNode temp2 = head2;
+        while (temp1 != null) {
+            len1++;
+            temp1 = temp1.next;
+        }
+        while (temp2 != null) {
+            len2++;
+            temp2 = temp2.next;
+        }
+        int diff = Math.abs(len1 - len2);
+        ListNode longHead = head1;
+        ListNode shortHead = head2;
+        if (len1 < len2) {
+            longHead = head2;
+            shortHead = head1;
+        }
+        for (int i = 0; i < diff; i++) {
+            longHead = longHead.next;
+        }
+        while (longHead != null && shortHead != null && longHead != shortHead) {
+            longHead = longHead.next;
+            shortHead = shortHead.next;
+        }
+        return longHead;
+    }
+
+
+    public static void main(String[] args) {
+        ListNode head = new ListNode(0);
+        ListNode a = new ListNode(1);
+        ListNode b = new ListNode(2);
+        ListNode c = new ListNode(3);
+        head.next = a;
+        a.next = b;
+        b.next = c;
+//		System.out.println(getLength(head));
+//		System.out.println(findLastNode(head, 1).val);
+//		System.out.println(findLastNode(head, 1).val);
+//		System.out.println(findMidNode(head).val);
+//		ListNode d = new ListNode(3);
+//		c.next = d;
+//		System.out.println(findMidNode(head).val);
+
+//        ListNode head1 = new ListNode(2);
+//        ListNode a1 = new ListNode(3);
+//        ListNode b1 = new ListNode(4);
+//        ListNode c1 = new ListNode(5);
+//		head1.next = a1;
+//		a1.next = b1;
+//		b1.next = c1;
+//        ListNode merge = mergeLinkList(head1, head);
+//		System.out.println("-------------链表合并--------------");
+//		while(merge != null){
+//			System.out.print(merge.val + "->");
+//			merge = merge.next;
+//		}
+
+//        ListNode reverse = reverseList(head);
+//		System.out.println("-------------链表反转--------------");
+//		while(reverse != null){
+//			System.out.print(reverse.val + "->");
+//			reverse = reverse.next;
+//		}
+
+//		System.out.println("------------链表反转：递归---------------");
+//		reversePrint(head);
+//		System.out.println("------------链表反转：栈---------------");
+//		reversePrintByStack(head);
+
+//        System.out.println("------------链表环---------------");
+//		System.out.println(hasCycle(head));
+//		c.next = head;
+//		System.out.println("是否存在环：" + hasCycle(head));
+//		System.out.println("环的长度是：" + getCycleLength(head));
+//		System.out.println("环的起始节点是：" + getCycleStart(head).val);
+
+        ListNode head4 = new ListNode(4);
+        ListNode a4 = new ListNode(5);
+        head4.next = a4;
+        a4.next = b;
+        System.out.println(meetNode(head, head4).val);
+    }
 
 }

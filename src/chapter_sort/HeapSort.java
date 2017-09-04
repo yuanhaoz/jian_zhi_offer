@@ -38,7 +38,7 @@ public class HeapSort {
         for (int i = arr.length / 2; i >= 0; i--) {
             heapAdjust(arr, i, arr.length - 1);
         }
-        // 每次进行对调整，得到排序的数组
+        // 每次进行调整，得到排序的数组
         for (int i = arr.length - 1; i >= 0; i--) {
             Swap.swap(arr, 0, i);
             heapAdjust(arr, 0, i - 1);
