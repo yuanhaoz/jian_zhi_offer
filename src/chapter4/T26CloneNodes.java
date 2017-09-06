@@ -30,7 +30,7 @@ public class T26CloneNodes {
         }
         ComplexListNode temp = root;
         while (temp != null) {
-            ComplexListNode copy = new ComplexListNode(root.val); // 值等于原来节点
+            ComplexListNode copy = new ComplexListNode(temp.val); // 值等于原来节点
             copy.next = temp.next;
             temp.next = copy;
             temp = copy.next; // 更新节点为下一个需要复制的节点

@@ -20,10 +20,11 @@ import java.util.Stack;
  * 12、以 k 个节点为段，反转单链表。Reverse Nodes in k_Group，Leetcode上的算法题，第6题的高级变种
  * Created by 18710 on 2017/8/24.
  */
-public class ListRelatedQuestion {
+public class List {
 
     /**
-     * 以 k 个节点为段，反转单链表。Reverse Nodes in k_Group，Leetcode上的算法题，第6题的高级变种
+     * 以 k 个节点为段，反转单链表。
+     * Reverse Nodes in k_Group，Leetcode上的算法题，第6题的高级变种
      * @param head 链表头结点
      * @param k 每k个节点反转
      * @return 反转后的链表头
@@ -72,7 +73,8 @@ public class ListRelatedQuestion {
     }
 
     /**
-     * 以 k 个节点为段，反转单链表。Reverse Nodes in k_Group，Leetcode上的算法题，第6题的高级变种
+     * 以 k 个节点为段，反转单链表。
+     * Reverse Nodes in k_Group，Leetcode上的算法题，第6题的高级变种
      * @param head 链表头结点
      * @param k 每k个节点反转
      * @return 反转后的链表头
