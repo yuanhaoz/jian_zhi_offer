@@ -30,7 +30,11 @@ package chapter2;
  */
 public class T8MinNumberInRotateArray {
 
-    // 二分法
+    /**
+     * 二分法
+     * @param array 数组
+     * @return 旋转数组的最小元素
+     */
     public static int minNumberInRotateArray(int [] array) {
         if (array == null || array.length == 0) {
             return 0;

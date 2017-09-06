@@ -63,8 +63,8 @@ public class T9Fibonacci {
      * 我们发现有很多节点是重复的，而且重复的节点数会随着n的增大而急剧增加，这意味着计算量会随着n的增大而急剧增大。事实上，用递归方法计算的时间复杂度是以n的指数的
      * 方式递增的。
      *
-     * @param n
-     * @return
+     * @param n 斐波那契的第n项
+     * @return 斐波那契第n项的值
      */
     public static int Fibonacci(int n) {
         if (n == 0) {
@@ -82,8 +82,8 @@ public class T9Fibonacci {
      * 更简单的方法是：
      * 从下往上计算，首先根据f(0)和f(1)算出f(2)，再根据f(1)和f(2)算出f(3)。。。依次类推就可以算出第n项了。很容易理解，这种思路的时间复杂度是O(n)。
      *
-     * @param n
-     * @return
+     * @param n 斐波那契的第n项
+     * @return 斐波那契第n项的值
      */
     public static int FibonacciBetter(int n) {
         if (n == 0) {
