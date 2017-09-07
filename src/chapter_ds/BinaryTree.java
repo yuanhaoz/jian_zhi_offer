@@ -94,9 +94,11 @@ public class BinaryTree {
         System.out.println("（非递归）两棵树是否相同：" + isSame(root, root1));
         System.out.println("（递归）树是否是AVL平衡二叉树：" + isAVLTree(root));
 
-        System.out.println("（递归）二叉树是的镜像是：");
+        System.out.println("（递归）二叉树的镜像是：");
         mirrorRec(root);
         levelTraversal(root);
+        System.out.println("（非递归）二叉树的镜像是：");
+        mirror(root);
     }
 
     /**
@@ -555,7 +557,37 @@ public class BinaryTree {
         return isMirrorRec(r1.left, r2.right) && isMirrorRec(r1.right, r2.left);
     }
 
+    /**
+     * 求二叉树的镜像   非递归解法：
+     * （1）如果二叉树为空，返回空
+     * （2）如果二叉树不为空，求左子树和右子树的镜像，然后交换左右子树
+     *
+     * 1. 破坏原来的树，把原来的树改成其镜像
+     *
+     * @param root 树根节点
+     */
+    public static void mirror(TreeNode root) {
+        if (root == null) {
+            return ;
+        }
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(root);
+        while (!stack.isEmpty()){
+            TreeNode cur = stack.pop();
+            // 交换左右孩子
+            TreeNode tmp = cur.right;
+            cur.right = cur.left;
+            cur.left = tmp;
 
+            if(cur.right != null) {
+                stack.push(cur.right);
+            }
+            if (cur.left != null) {
+                stack.push(cur.left);
+            }
+
+        }
+    }
 
 
 
