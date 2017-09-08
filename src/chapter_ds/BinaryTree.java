@@ -589,6 +589,39 @@ public class BinaryTree {
         }
     }
 
-
-
+    /**
+     * 求二叉树的镜像   非递归解法：
+     * （1）如果二叉树为空，返回空
+     * （2）如果二叉树不为空，求左子树和右子树的镜像，然后交换左右子树
+     *
+     * 2. 不能破坏原来的树，返回一个新的镜像树
+     *
+     * @param root
+     * @return
+     */
+    public static TreeNode mirrorCopy(TreeNode root) {
+        if (root == null) {
+            return null;
+        }
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        Stack<TreeNode> newStack = new Stack<TreeNode>();
+        stack.push(root);
+        TreeNode newRoot = new TreeNode(root.val);
+        newStack.push(newRoot);
+        while (!stack.isEmpty()) {
+            TreeNode cur = stack.pop();
+            TreeNode newCur = newStack.pop();
+            if (cur.right != null) {
+                stack.push(cur.right);
+                newCur.left = new TreeNode(cur.right.val);
+                newStack.push(newCur.left);
+            }
+            if (cur.left != null) {
+                stack.push(cur.left);
+                newCur.right = new TreeNode(cur.left.val);
+                newStack.push(newCur.right);
+            }
+        }
+        return newRoot;
+    }
 }
