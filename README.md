@@ -5,12 +5,12 @@
 
 ### 第2章：面试需要的基本知识
 #### 编程语言 C++/C/Java
-1. 赋值运算符函数
-2. 实现Singleton模式（设计模式，参考）
+1. 赋值运算符函数<a href="src/chapter2/T1AssignmentOperator.java"  target="_blank">前往</a>
+2. 实现Singleton模式（设计模式，参考）<a href="src/chapter2/T2Singleton.java"  target="_blank">前往</a>
 #### 数据结构
-3. 二维数组中的查找（数组）
-4. 替换空格（不使用自带函数）（字符串）
-5. 从尾到头打印链表（栈、递归）（链表）
+3. 二维数组中的查找（数组）<a href="src/chapter2/T3TwoArraySearch.java"  target="_blank">前往</a>
+4. 替换空格（不使用自带函数）（字符串）<a href="src/chapter2/T4ReplaceSpace.java"  target="_blank">前往</a>
+5. 从尾到头打印链表（栈、递归）（链表）<a href="src/chapter2/T5PrintListFromTailTohead.java"  target="_blank">前往</a>
 6. 重建二叉树（前序、中序、后序遍历特点、递归）（树）<a href="src/chapter2/T6ReConstructBinaryTree.java"  target="_blank">前往</a>
 7. 用两个栈实现对列（入队和出队）（栈和对列）<a href="src/chapter2/T7TwoStackToQueue.java"  target="_blank">前往</a>
 #### 算法和数据操作
