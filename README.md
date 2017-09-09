@@ -100,5 +100,6 @@
 3. 链表相关的考题：单链表反转，是否有环等等 <a href="src/chapter_ds/LongestCommonSubstring.java"  target="_blank">前往</a>
 
 ### 附加3：面试中常问/手写的算法（chapter_freq）
-1. 求一个数的平方根（二分法 t=c/t）<a href="src/chapter_freq/SqrtAlgorithm.java"  target="_blank">前往</a>
-2. 微信抢红包算法（红包类的设计）<a href="src/chapter_freq/WeiChatRedPacket.java"  target="_blank">前往</a>
+1. 求一个数的平方根（二分法 t=c/t）<a href="src/chapter_freq/T1SqrtAlgorithm.java"  target="_blank">前往</a>
+2. 微信抢红包算法（红包类的设计）<a href="src/chapter_freq/T2WeiChatRedPacket.java"  target="_blank">前往</a>
+3. 数组分割（动态规划、S(k, i)表示前k个元素中任意i个元素的和的集合）<a href="src/chapter_freq/T3ArraySplit.java"  target="_blank">前往</a>
