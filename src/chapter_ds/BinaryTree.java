@@ -624,4 +624,43 @@ public class BinaryTree {
         }
         return newRoot;
     }
+
+    /**
+     * 求二叉树中两个节点的最低公共祖先节点
+     * 递归解法：
+     * （1）如果两个节点分别在根节点的左子树和右子树，则返回根节点
+     * （2）如果两个节点都在左子树，则递归处理左子树；如果两个节点都在右子树，则递归处理右子树
+     */
+    public static TreeNode getLastCommonParentRec(TreeNode root, TreeNode n1, TreeNode n2) {
+        if (findNodeRec(root.left, n1)) { // 如果n1在左子树
+            if (findNodeRec(root.right, n2)) { // 如果n2在右子树
+                return root; // 返回根节点
+            } else { // 如果n2也在左子树
+                return getLastCommonParentRec(root.left, n1, n2); // 递归处理
+            }
+        } else { // 如果n1在右子树
+            if (findNodeRec(root.left, n2)) { // 如果n2在左子树
+                return root; // 返回根节点
+            } else { // 如果n2在右子树
+                return getLastCommonParentRec(root.right, n1, n2); // 递归处理
+            }
+        }
+    }
+
+    // 递归判断一个点是否在树里
+    private static boolean findNodeRec(TreeNode root, TreeNode node) {
+        if (node == null || root == null) {
+            return false;
+        }
+        if (root == node) {
+            return true;
+        }
+        // 先尝试在左子树中查找
+        boolean found = findNodeRec(root.left, node);
+        if (!found) { // 如果查找不到，再在右子树中查找
+            found = findNodeRec(root.right, node);
+        }
+        return found;
+    }
+
 }
