@@ -103,3 +103,4 @@
 1. 求一个数的平方根（二分法 t=c/t）<a href="src/chapter_freq/T1SqrtAlgorithm.java"  target="_blank">前往</a>
 2. 微信抢红包算法（红包类的设计）<a href="src/chapter_freq/T2WeiChatRedPacket.java"  target="_blank">前往</a>
 3. 数组分割（动态规划、S(k, i)表示前k个元素中任意i个元素的和的集合）<a href="src/chapter_freq/T3ArraySplit.java"  target="_blank">前往</a>
+4. 0-1背包问题（动态规划）<a href="src/chapter_freq/T4Package1.java"  target="_blank">前往</a>
