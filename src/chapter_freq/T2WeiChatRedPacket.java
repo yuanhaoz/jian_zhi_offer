@@ -12,7 +12,7 @@ import java.util.Random;
  *
  *  Created by 18710 on 2017/8/25.
  */
-public class WeiChatRedPacket {
+public class T2WeiChatRedPacket {
 
     /**
      * 红包类（内部类）

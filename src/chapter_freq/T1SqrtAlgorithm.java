@@ -11,7 +11,7 @@ package chapter_freq;
  奇数次方根需要转换为正数, 确保循环收敛, 再进行结果正负判断;
  * Created by 18710 on 2017/8/30.
  */
-public class SqrtAlgorithm {
+public class T1SqrtAlgorithm {
 
     public static double sqrt(double c)
     {

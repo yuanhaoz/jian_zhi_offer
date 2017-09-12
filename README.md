@@ -5,12 +5,12 @@
 
 ### 第2章：面试需要的基本知识
 #### 编程语言 C++/C/Java
-1. 赋值运算符函数
-2. 实现Singleton模式（设计模式，参考）
+1. 赋值运算符函数<a href="src/chapter2/T1AssignmentOperator.java"  target="_blank">前往</a>
+2. 实现Singleton模式（设计模式，参考）<a href="src/chapter2/T2Singleton.java"  target="_blank">前往</a>
 #### 数据结构
-3. 二维数组中的查找（数组）
-4. 替换空格（不使用自带函数）（字符串）
-5. 从尾到头打印链表（栈、递归）（链表）
+3. 二维数组中的查找（数组）<a href="src/chapter2/T3TwoArraySearch.java"  target="_blank">前往</a>
+4. 替换空格（不使用自带函数）（字符串）<a href="src/chapter2/T4ReplaceSpace.java"  target="_blank">前往</a>
+5. 从尾到头打印链表（栈、递归）（链表）<a href="src/chapter2/T5PrintListFromTailTohead.java"  target="_blank">前往</a>
 6. 重建二叉树（前序、中序、后序遍历特点、递归）（树）<a href="src/chapter2/T6ReConstructBinaryTree.java"  target="_blank">前往</a>
 7. 用两个栈实现对列（入队和出队）（栈和对列）<a href="src/chapter2/T7TwoStackToQueue.java"  target="_blank">前往</a>
 #### 算法和数据操作
@@ -100,5 +100,9 @@
 3. 链表相关的考题：单链表反转，是否有环等等 <a href="src/chapter_ds/LongestCommonSubstring.java"  target="_blank">前往</a>
 
 ### 附加3：面试中常问/手写的算法（chapter_freq）
-1. 求一个数的平方根（二分法 t=c/t）<a href="src/chapter_freq/SqrtAlgorithm.java"  target="_blank">前往</a>
-2. 微信抢红包算法（红包类的设计）<a href="src/chapter_freq/WeiChatRedPacket.java"  target="_blank">前往</a>
+1. 求一个数的平方根（二分法 t=c/t）<a href="src/chapter_freq/T1SqrtAlgorithm.java"  target="_blank">前往</a>
+2. 微信抢红包算法（红包类的设计）<a href="src/chapter_freq/T2WeiChatRedPacket.java"  target="_blank">前往</a>
+3. 数组分割（动态规划、S(k, i)表示前k个元素中任意i个元素的和的集合）<a href="src/chapter_freq/T3ArraySplit.java"  target="_blank">前往</a>
+4. 0-1背包问题（动态规划）<a href="src/chapter_freq/T4Package1.java"  target="_blank">前往</a>
+5. 基于Socket的TCP通信 <a href="src/chapter_freq/T5Socket.java"  target="_blank">前往</a>
+6. 基于wait/notify的生产者消费者模式 <a href="src/chapter_freq/T6ProducerAndConsumer.java"  target="_blank">前往</a>
