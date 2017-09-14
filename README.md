@@ -106,3 +106,13 @@
 4. 0-1背包问题（动态规划）<a href="src/chapter_freq/T4Package1.java"  target="_blank">前往</a>
 5. 基于Socket的TCP通信 <a href="src/chapter_freq/T5Socket.java"  target="_blank">前往</a>
 6. 基于wait/notify的生产者消费者模式 <a href="src/chapter_freq/T6ProducerAndConsumer.java"  target="_blank">前往</a>
+7. 基于await()/signal()的生产者消费者模式 <a href="src/chapter_freq/T7ProducerAndConsumerAwaitAndSignal.java"  target="_blank">前往</a>
+8. 基于阻塞队列的生产者消费者模式 <a href="src/chapter_freq/T8ProducerAndConsumerBlockingQueue.java"  target="_blank">前往</a>
+
+### 附加4：设计模式（chapter_dp）
+#### 创建型
+
+#### 构造型
+代理模式 <a href="src/chapter_dp/structure/proxy/ProxyPatternDemo.java"  target="_blank">前往</a>
+
+#### 行为型
