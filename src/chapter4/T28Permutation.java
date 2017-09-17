@@ -1,7 +1,11 @@
 package chapter4;
 
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
+
 /**
- * 面试题28：字符串的排列
+ * 面试题28：字符串的排列（考虑重复元素，并按照字典序排序）
  * 题目：输入一个字符串，打印出该字符串中字符的所有排序。例如输入字符串abc，则打印出由字符a/b/c所能排列出来的所有字符串abc/acb/bac/bca/cab/cba。
  *
  * 思路：
@@ -34,7 +38,6 @@ public class T28Permutation {
     /**
      * 题目：输入一个字符串，打印出该字符事中字符的所有排列。例如输入字符串abc。
      * 则打印出由字符a、b、c 所能排列出来的所有字符串abc、acb、bac、bca、cab和cba。
-     *
      * @param chars 待排序的字符数组
      */
     public static void permutation(char[] chars) {
@@ -44,6 +47,12 @@ public class T28Permutation {
         permutation(chars, 0);
     }
 
+    /**
+     * 题目：输入一个字符串，打印出该字符事中字符的所有排列。例如输入字符串abc。
+     * 则打印出由字符a、b、c 所能排列出来的所有字符串abc、acb、bac、bca、cab和cba。
+     * @param chars 当前数组
+     * @param begin 已经处理位数
+     */
     public static void permutation(char[] chars, int begin) {
         // 如果是最后一个元素了，就输出排列结果
         if (begin == chars.length - 1) {
@@ -71,6 +80,57 @@ public class T28Permutation {
 
         char[] c2 = {'a', 'b', 'c', 'd'};
         permutation(c2);
+
+        char[] c3 = {'a', 'a', 'c', 'd'};
+        permutation(c3);
+    }
+
+    /**
+     * 题目：输入一个字符串，打印出该字符事中字符的所有排列。例如输入字符串abc。
+     * 则打印出由字符a、b、c 所能排列出来的所有字符串abc、acb、bac、bca、cab和cba。
+     * @param str 待排序的字符串
+     */
+    public static void permutation2(String str) {
+        int n = str.length();
+        char[] arr = new char[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = str.charAt(i);
+        }
+        if (arr.length == 0) {
+            System.out.println();
+        }
+        List<String> result = new LinkedList<>();
+        permutation2(arr, 0, result);
+        Collections.sort(result); // 按照字典序进行重新排序输出
+        for (int i = 0; i < result.size(); i++) {
+            System.out.println(result.get(i));
+        }
+    }
+
+    /**
+     * 题目：输入一个字符串，打印出该字符事中字符的所有排列。例如输入字符串abc。
+     * 则打印出由字符a、b、c 所能排列出来的所有字符串abc、acb、bac、bca、cab和cba。
+     * @param arr 字符数组
+     * @param index 当前处理元素个数
+     * @param result 处理结果
+     */
+    public static void permutation2(char[] arr, int index, List<String> result) {
+        if (index == arr.length - 1) { // 去除重复的情况
+            String str1 = new String(arr);
+            if (result.indexOf(str1) < 0) {
+                result.add(new String(arr));
+            }
+        } else {
+            for (int i = index; i < arr.length; i++) {
+                char temp = arr[i];
+                arr[i] = arr[index];
+                arr[index] = temp;
+                permutation2(arr, index + 1, result);
+                temp = arr[i];
+                arr[i] = arr[index];
+                arr[index] = temp;
+            }
+        }
     }
 
 
