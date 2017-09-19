@@ -108,6 +108,8 @@
 6. 基于wait/notify的生产者消费者模式 <a href="src/chapter_freq/T6ProducerAndConsumer.java"  target="_blank">前往</a>
 7. 基于await()/signal()的生产者消费者模式 <a href="src/chapter_freq/T7ProducerAndConsumerAwaitAndSignal.java"  target="_blank">前往</a>
 8. 基于阻塞队列的生产者消费者模式 <a href="src/chapter_freq/T8ProducerAndConsumerBlockingQueue.java"  target="_blank">前往</a>
+9. 1-n的数组中和等于m的所有情况（背包问题） <a href="src/chapter_freq/T9SumPackage.java"  target="_blank">前往</a>
+10. 整数反转（考虑整数溢出，模十取余） <a href="src/chapter_freq/T10ReverseInteger.java"  target="_blank">前往</a>
 
 ### 附加4：设计模式（chapter_dp）
 #### 创建型
