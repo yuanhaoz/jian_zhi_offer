@@ -647,7 +647,12 @@ public class BinaryTree {
         }
     }
 
-    // 递归判断一个点是否在树里
+    /**
+     * 递归判断一个点是否在树里
+     * @param root 根节点
+     * @param node 查找的节点
+     * @return
+     */
     private static boolean findNodeRec(TreeNode root, TreeNode node) {
         if (node == null || root == null) {
             return false;
@@ -661,6 +666,57 @@ public class BinaryTree {
             found = findNodeRec(root.right, node);
         }
         return found;
+    }
+
+    /**
+     * 判断是否为二分查找树BST：中序遍历的结果应该是递增的
+     * @param root 根节点
+     * @param pre 上一个保存的节点
+     * @return 是否为BST树
+     */
+    public static boolean isValidBST(TreeNode root, int pre){
+        if (root == null) {
+            return true;
+        }
+        boolean left = judgeBST(root.left, pre);
+        if (!left) {
+            return false;
+        }
+        if(root.val <= pre) {
+            return false;
+        }
+        pre = root.val;
+        boolean right = judgeBST(root.right, pre);
+        if(!right) {
+            return false;
+        }
+        return true;
+    }
+
+    /** 判断一个二叉树是不是合法的二叉树的非递归遍历
+     * 采用中序遍历，并保存一个前驱节点，这样在每检查一个
+     * 节点的时候，就跟前驱节点对比，如果比前驱节点小（或者等于）
+     * 就表示不合法
+     * @param root 根节点
+     */
+    public boolean isValidBST2(TreeNode root){
+        Stack<TreeNode> stack = new Stack<>();
+        //设置前驱节点
+        TreeNode pre = null;
+        while(root != null || !stack.isEmpty()){
+            while (root != null) { // 将当前节点，以及左子树一直入栈，循环结束时，root==null
+                stack.push(root);
+                root = root.left;
+            }
+            root = stack.pop();
+            //比较并更新前驱，与普通遍历的区别就在下面四行
+            if(pre != null && root.val <= pre.val){
+                return false;
+            }
+            pre = root;
+            root = root.right;  //访问右子树
+        }
+        return true;
     }
 
 }
