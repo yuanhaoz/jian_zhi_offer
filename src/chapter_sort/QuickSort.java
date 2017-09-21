@@ -1,6 +1,8 @@
 package chapter_sort;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Stack;
 
 /**
  * 快速排序
@@ -24,7 +26,8 @@ public class QuickSort {
 
     public static void main(String[] args) {
         int[] arr = {5, 3, 4, 8, 2};
-        sort(arr);
+//        sort(arr);
+        quickSortNonRec(arr);
         System.out.println(Arrays.toString(arr));
     }
 
@@ -76,6 +79,32 @@ public class QuickSort {
         }
         arr[left] = temp;
         return left;
+    }
+
+    /**
+     * 非递归实现
+     * @param arr 数组
+     */
+    public static void quickSortNonRec(int[] arr) {
+        if (arr == null || arr.length == 0) {
+            return;
+        }
+        Stack<Integer> stack = new Stack<>(); // 用一个栈保存每次循环的子数组范围
+        stack.add(0);
+        stack.add(arr.length - 1);
+        while (!stack.isEmpty()) {
+            int right = stack.pop();
+            int left = stack.pop();
+            int pos = partition(arr, left, right);
+            if (pos - 1 > left) {
+                stack.add(left);
+                stack.add(pos - 1);
+            }
+            if (pos + 1 < right) {
+                stack.add(pos + 1);
+                stack.add(right);
+            }
+        }
     }
 
 }
