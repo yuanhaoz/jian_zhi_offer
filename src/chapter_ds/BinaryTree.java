@@ -678,7 +678,7 @@ public class BinaryTree {
         if (root == null) {
             return true;
         }
-        boolean left = judgeBST(root.left, pre);
+        boolean left = isValidBST(root.left, pre);
         if (!left) {
             return false;
         }
@@ -686,7 +686,7 @@ public class BinaryTree {
             return false;
         }
         pre = root.val;
-        boolean right = judgeBST(root.right, pre);
+        boolean right = isValidBST(root.right, pre);
         if(!right) {
             return false;
         }
