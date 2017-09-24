@@ -3,9 +3,7 @@ package chapter_ds;
 import bean.TreeNode;
 import sun.reflect.generics.tree.Tree;
 
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
+import java.util.*;
 
 /**
  * http://blog.csdn.net/luckyxiaoqiang/article/details/7518888  轻松搞定面试中的二叉树题目
@@ -596,8 +594,8 @@ public class BinaryTree {
      *
      * 2. 不能破坏原来的树，返回一个新的镜像树
      *
-     * @param root
-     * @return
+     * @param root 树根节点
+     * @return 镜像树的根节点
      */
     public static TreeNode mirrorCopy(TreeNode root) {
         if (root == null) {
@@ -630,6 +628,10 @@ public class BinaryTree {
      * 递归解法：
      * （1）如果两个节点分别在根节点的左子树和右子树，则返回根节点
      * （2）如果两个节点都在左子树，则递归处理左子树；如果两个节点都在右子树，则递归处理右子树
+     * @param root 树根节点
+     * @param n1 第一个节点
+     * @param n2 第二个节点
+     * @return 最低公共祖先节点
      */
     public static TreeNode getLastCommonParentRec(TreeNode root, TreeNode n1, TreeNode n2) {
         if (findNodeRec(root.left, n1)) { // 如果n1在左子树
@@ -651,7 +653,7 @@ public class BinaryTree {
      * 递归判断一个点是否在树里
      * @param root 根节点
      * @param node 查找的节点
-     * @return
+     * @return 是否找到该节点
      */
     private static boolean findNodeRec(TreeNode root, TreeNode node) {
         if (node == null || root == null) {
@@ -664,6 +666,93 @@ public class BinaryTree {
         boolean found = findNodeRec(root.left, node);
         if (!found) { // 如果查找不到，再在右子树中查找
             found = findNodeRec(root.right, node);
+        }
+        return found;
+    }
+
+    /**
+     * 树中两个节点的最低公共祖先节点
+     * @param root 树根节点
+     * @param n1 第一个节点
+     * @param n2 第二个节点
+     * @return 最低公共祖先节点
+     */
+    public static TreeNode getLastCommonParentRec2(TreeNode root, TreeNode n1, TreeNode n2) {
+        if (root == null) {
+            return null;
+        }
+        // 如果有一个match，则说明当前node就是要找的最低公共祖先
+        if (root.equals(n1) || root.equals(n2)) {
+            return root;
+        }
+        TreeNode commonLeft = getLastCommonParentRec2(root.left, n1, n2);
+        TreeNode commonRight = getLastCommonParentRec2(root.right, n1, n2);
+        // 如果一个在左子树找到，一个在右子树找到，则说明root是唯一可能得最低公共祖先
+        if (commonLeft != null && commonRight != null) {
+            return root;
+        }
+        // 其他情况是要不然在左子树要不然在右子树
+        if (commonLeft != null) {
+            return commonLeft;
+        }
+        return commonRight;
+    }
+
+    /**
+     * 树中两个节点的最低公共祖先节点
+     * @param root 树根节点
+     * @param n1 第一个节点
+     * @param n2 第二个节点
+     * @return 第一个公共祖先节点
+     */
+    public static TreeNode getLastCommonParent(TreeNode root, TreeNode n1, TreeNode n2) {
+        if (root == null || n1 == null || n2 == null) {
+            return null;
+        }
+        ArrayList<TreeNode> p1 = new ArrayList<>();
+        boolean res1 = getNodePath(root, n1, p1);
+        ArrayList<TreeNode> p2 = new ArrayList<>();
+        boolean res2 = getNodePath(root, n2, p2);
+        if (!res1 || !res2) {
+            return null;
+        }
+        TreeNode last = null;
+        Iterator<TreeNode> iter1 = p1.iterator();
+        Iterator<TreeNode> iter2 = p2.iterator();
+        while (iter1.hasNext() && iter2.hasNext()) {
+            TreeNode tmp1 = iter1.next();
+            TreeNode tmp2 = iter2.next();
+            if (tmp1 == tmp2) {
+                last = tmp1;
+            } else { // 直到遇到非公共节点
+                break;
+            }
+        }
+        return last;
+    }
+
+    /**
+     * 把从根节点到node路径上所有的点都添加到path中
+     * @param root 树根节点
+     * @param node 终点节点
+     * @param path 路径
+     * @return 是否是目标节点
+     */
+    public static boolean getNodePath(TreeNode root, TreeNode node, ArrayList<TreeNode> path) {
+        if (root == null) {
+            return false;
+        }
+        path.add(root); // 把这个节点添加到路径中
+        if (root == node) {
+            return true;
+        }
+        boolean found = false;
+        found = getNodePath(root.left, node, path); // 先在左子树中找
+        if (!found) {
+            found = getNodePath(root.right, node, path);
+        }
+        if (!found) { // 如果实在没找到证明这个节点不在路径中，删除刚刚那个节点
+            path.remove(root);
         }
         return found;
     }
