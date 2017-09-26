@@ -3,9 +3,7 @@ package chapter_ds;
 import bean.TreeNode;
 import sun.reflect.generics.tree.Tree;
 
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
+import java.util.*;
 
 /**
  * http://blog.csdn.net/luckyxiaoqiang/article/details/7518888  轻松搞定面试中的二叉树题目
@@ -596,8 +594,8 @@ public class BinaryTree {
      *
      * 2. 不能破坏原来的树，返回一个新的镜像树
      *
-     * @param root
-     * @return
+     * @param root 树根节点
+     * @return 镜像树的根节点
      */
     public static TreeNode mirrorCopy(TreeNode root) {
         if (root == null) {
@@ -630,6 +628,10 @@ public class BinaryTree {
      * 递归解法：
      * （1）如果两个节点分别在根节点的左子树和右子树，则返回根节点
      * （2）如果两个节点都在左子树，则递归处理左子树；如果两个节点都在右子树，则递归处理右子树
+     * @param root 树根节点
+     * @param n1 第一个节点
+     * @param n2 第二个节点
+     * @return 最低公共祖先节点
      */
     public static TreeNode getLastCommonParentRec(TreeNode root, TreeNode n1, TreeNode n2) {
         if (findNodeRec(root.left, n1)) { // 如果n1在左子树
@@ -647,7 +649,12 @@ public class BinaryTree {
         }
     }
 
-    // 递归判断一个点是否在树里
+    /**
+     * 递归判断一个点是否在树里
+     * @param root 根节点
+     * @param node 查找的节点
+     * @return 是否找到该节点
+     */
     private static boolean findNodeRec(TreeNode root, TreeNode node) {
         if (node == null || root == null) {
             return false;
@@ -661,6 +668,144 @@ public class BinaryTree {
             found = findNodeRec(root.right, node);
         }
         return found;
+    }
+
+    /**
+     * 树中两个节点的最低公共祖先节点
+     * @param root 树根节点
+     * @param n1 第一个节点
+     * @param n2 第二个节点
+     * @return 最低公共祖先节点
+     */
+    public static TreeNode getLastCommonParentRec2(TreeNode root, TreeNode n1, TreeNode n2) {
+        if (root == null) {
+            return null;
+        }
+        // 如果有一个match，则说明当前node就是要找的最低公共祖先
+        if (root.equals(n1) || root.equals(n2)) {
+            return root;
+        }
+        TreeNode commonLeft = getLastCommonParentRec2(root.left, n1, n2);
+        TreeNode commonRight = getLastCommonParentRec2(root.right, n1, n2);
+        // 如果一个在左子树找到，一个在右子树找到，则说明root是唯一可能得最低公共祖先
+        if (commonLeft != null && commonRight != null) {
+            return root;
+        }
+        // 其他情况是要不然在左子树要不然在右子树
+        if (commonLeft != null) {
+            return commonLeft;
+        }
+        return commonRight;
+    }
+
+    /**
+     * 树中两个节点的最低公共祖先节点
+     * @param root 树根节点
+     * @param n1 第一个节点
+     * @param n2 第二个节点
+     * @return 第一个公共祖先节点
+     */
+    public static TreeNode getLastCommonParent(TreeNode root, TreeNode n1, TreeNode n2) {
+        if (root == null || n1 == null || n2 == null) {
+            return null;
+        }
+        ArrayList<TreeNode> p1 = new ArrayList<>();
+        boolean res1 = getNodePath(root, n1, p1);
+        ArrayList<TreeNode> p2 = new ArrayList<>();
+        boolean res2 = getNodePath(root, n2, p2);
+        if (!res1 || !res2) {
+            return null;
+        }
+        TreeNode last = null;
+        Iterator<TreeNode> iter1 = p1.iterator();
+        Iterator<TreeNode> iter2 = p2.iterator();
+        while (iter1.hasNext() && iter2.hasNext()) {
+            TreeNode tmp1 = iter1.next();
+            TreeNode tmp2 = iter2.next();
+            if (tmp1 == tmp2) {
+                last = tmp1;
+            } else { // 直到遇到非公共节点
+                break;
+            }
+        }
+        return last;
+    }
+
+    /**
+     * 把从根节点到node路径上所有的点都添加到path中
+     * @param root 树根节点
+     * @param node 终点节点
+     * @param path 路径
+     * @return 是否是目标节点
+     */
+    public static boolean getNodePath(TreeNode root, TreeNode node, ArrayList<TreeNode> path) {
+        if (root == null) {
+            return false;
+        }
+        path.add(root); // 把这个节点添加到路径中
+        if (root == node) {
+            return true;
+        }
+        boolean found = false;
+        found = getNodePath(root.left, node, path); // 先在左子树中找
+        if (!found) {
+            found = getNodePath(root.right, node, path);
+        }
+        if (!found) { // 如果实在没找到证明这个节点不在路径中，删除刚刚那个节点
+            path.remove(root);
+        }
+        return found;
+    }
+
+    /**
+     * 判断是否为二分查找树BST：中序遍历的结果应该是递增的
+     * @param root 根节点
+     * @param pre 上一个保存的节点
+     * @return 是否为BST树
+     */
+    public static boolean isValidBST(TreeNode root, int pre){
+        if (root == null) {
+            return true;
+        }
+        boolean left = isValidBST(root.left, pre);
+        if (!left) {
+            return false;
+        }
+        if(root.val <= pre) {
+            return false;
+        }
+        pre = root.val;
+        boolean right = isValidBST(root.right, pre);
+        if(!right) {
+            return false;
+        }
+        return true;
+    }
+
+    /** 判断一个二叉树是不是合法的二叉树的非递归遍历
+     * 采用中序遍历，并保存一个前驱节点，这样在每检查一个
+     * 节点的时候，就跟前驱节点对比，如果比前驱节点小（或者等于）
+     * 就表示不合法
+     * @param root 根节点
+     */
+    public boolean isValidBST2(TreeNode root){
+        Stack<TreeNode> stack = new Stack<>();
+        //设置前驱节点
+        TreeNode pre = null;
+        while(root != null || !stack.isEmpty()){
+            while (root != null) { // 将当前节点，以及左子树一直入栈，循环结束时，root==null
+                stack.push(root);
+                root = root.left;
+            }
+            root = stack.pop();
+            //比较并更新前驱，与普通遍历的区别就在下面四行
+            if(pre != null && root.val <= pre.val){
+                return false;
+            }
+            pre = root;
+            root = root.right;  //访问右子树
+        }
+        return true;
     }
 
 }
