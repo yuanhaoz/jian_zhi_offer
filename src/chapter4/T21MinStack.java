@@ -22,11 +22,20 @@ public class T21MinStack {
      * @param <T>
      */
     public static class StackWithMin<T extends Comparable<T>> {
-        // 数据栈，用于存放插入的数据
+
+        /**
+         * 数据栈，用于存放插入的数据
+          */
         private Stack<T> dataStack;
-        // 最小数位置栈，存放数据栈中最小的数的位置
+
+        /**
+         * 最小数位置栈，存放数据栈中最小的数的位置
+          */
         private Stack<T> minStack;
-        // 构造函数
+
+        /**
+         * 构造函数
+          */
         public StackWithMin() {
             this.dataStack = new Stack<>();
             this.minStack = new Stack<>();
