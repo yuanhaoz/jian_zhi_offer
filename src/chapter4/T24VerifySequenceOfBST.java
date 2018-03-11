@@ -44,7 +44,7 @@ public class T24VerifySequenceOfBST {
             return true;
         }
         int root = sequence[end];
-        // 遍历左子树，此时i的值为右子树的第一个节点
+        // 遍历左子树，此时i的值为左子树的第一个节点
         int i = start;
         while (i < end && sequence[i] < root) {
             i++;

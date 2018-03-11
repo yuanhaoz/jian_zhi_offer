@@ -79,16 +79,16 @@ public class T25FindPath {
         //   5     12
         //  / \
         // 4   7
-//        TreeNode root = new TreeNode(10);
-//        TreeNode n1 = new TreeNode(5);
-//        TreeNode n2 = new TreeNode(12);
-//        TreeNode n3 = new TreeNode(4);
-//        TreeNode n4 = new TreeNode(7);
-//        root.left = n1;
-//        root.right = n2;
-//        n1.left = n3;
-//        n1.right = n4;
-//        findPath(root, 22);
+        root = new TreeNode(10);
+        n1 = new TreeNode(5);
+        n2 = new TreeNode(12);
+        n3 = new TreeNode(4);
+        n4 = new TreeNode(7);
+        root.left = n1;
+        root.right = n2;
+        n1.left = n3;
+        n1.right = n4;
+        findPath(root, 22);
     }
 
 }

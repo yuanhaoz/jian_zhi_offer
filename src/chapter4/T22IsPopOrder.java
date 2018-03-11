@@ -28,10 +28,24 @@ public class T22IsPopOrder {
         if (push == null || pop == null || push.length == 0 || pop.length == 0 || push.length != pop.length) {
             return false;
         }
-        int pushIndex = 0; // 需要压入的下标
-        int popIndex = 0; // 需要弹出的下标
-        Stack<Integer> stack = new Stack<>(); // 辅助栈
-        while(popIndex < pop.length) { // 弹出序列没有结束
+
+        /**
+         * 需要压入的下标
+         */
+        int pushIndex = 0;
+        /**
+         * 需要弹出的下标
+         */
+        int popIndex = 0;
+        /**
+         * 辅助栈
+         */
+        Stack<Integer> stack = new Stack<>();
+
+        /**
+         * 弹出序列没有结束
+         */
+        while(popIndex < pop.length) {
             // 栈初始为空、栈顶元素不等于需要弹出的元素时：不断压入元素入栈
             while(pushIndex < push.length && (stack.isEmpty() || stack.peek() != pop[popIndex])) { // 栈顶元素不是不要弹出的值
                 stack.push(push[pushIndex]);
