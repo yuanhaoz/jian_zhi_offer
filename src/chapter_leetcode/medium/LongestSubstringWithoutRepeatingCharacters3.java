@@ -1,6 +1,6 @@
 package chapter_leetcode.medium;
 
-import utils.Log;
+import chapter_leetcode.utils.Log;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,6 +1,6 @@
 package chapter_leetcode.easy;
 
-import utils.Log;
+import chapter_leetcode.utils.Log;
 
 import java.util.ArrayList;
 import java.util.List;

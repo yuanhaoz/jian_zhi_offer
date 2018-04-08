@@ -1,6 +1,6 @@
 package chapter_leetcode.medium;
 
-import utils.Log;
+import chapter_leetcode.utils.Log;
 
 /**  
  * 122. Best Time to Buy and Sell Stock II   Add to List QuestionEditorial Solution  My Submissions

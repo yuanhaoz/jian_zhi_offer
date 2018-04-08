@@ -1,6 +1,6 @@
 package chapter_leetcode.easy;
 
-import utils.Log;
+import chapter_leetcode.utils.Log;
 
 /**  
  * 27. Remove Element   Add to List QuestionEditorial Solution  My Submissions

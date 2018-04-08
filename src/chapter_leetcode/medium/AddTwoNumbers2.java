@@ -1,6 +1,6 @@
 package chapter_leetcode.medium;
 
-import utils.Log;
+import chapter_leetcode.utils.Log;
 
 /**
  * 2016年12月21号，今天一天就被这一道题折磨死了，走了一条弯路

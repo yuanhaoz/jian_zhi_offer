@@ -1,6 +1,6 @@
 package chapter_leetcode.medium;
 
-import utils.Log;
+import chapter_leetcode.utils.Log;
 
 import java.util.ArrayList;
 import java.util.Arrays;
