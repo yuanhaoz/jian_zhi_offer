@@ -1,4 +1,4 @@
-package chapter_dp.structure.responsibility;
+package chapter_dp.behavior.responsibility;
 
 /**
  * 创建扩展了该记录器类的实体类。
