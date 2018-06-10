@@ -1,4 +1,4 @@
-package chapter_dp.structure.responsibility;
+package chapter_dp.behavior.responsibility;
 
 /**
  * 创建抽象的记录器类。
