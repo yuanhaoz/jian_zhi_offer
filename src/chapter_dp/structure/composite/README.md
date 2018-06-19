@@ -28,3 +28,5 @@ __注意事项：__ 定义时为具体类。
 
 ## 实现
 我们有一个类 Employee，该类被当作组合模型类。CompositePatternDemo，我们的演示类使用 Employee 类来添加部门层次结构，并打印所有员工。
+
+![Image text](https://github.com/yuanhaoz/jian_zhi_offer/blob/branch-dp/src/chapter_dp/structure/composite/composite_pattern_uml_diagram.jpg)

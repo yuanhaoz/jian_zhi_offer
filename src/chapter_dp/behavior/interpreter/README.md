@@ -26,3 +26,5 @@ __注意事项：__ 可利用场景比较少，JAVA 中如果碰到可以用 exp
 我们将创建一个接口 Expression 和实现了 Expression 接口的实体类。定义作为上下文中主要解释器的 TerminalExpression 类。其他的类 OrExpression、AndExpression 用于创建组合式表达式。
 
 InterpreterPatternDemo，我们的演示类使用 Expression 类创建规则和演示表达式的解析。
+
+![Image text](https://github.com/yuanhaoz/jian_zhi_offer/blob/branch-dp/src/chapter_dp/behavior/interpreter/interpreter_pattern_uml_diagram.jpg)

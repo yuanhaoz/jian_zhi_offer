@@ -28,3 +28,5 @@ __注意事项：__ 在行为受状态约束的时候使用状态模式，而且
 我们将创建一个 State 接口和实现了 State 接口的实体状态类。Context 是一个带有某个状态的类。
 
 StatePatternDemo，我们的演示类使用 Context 和状态对象来演示 Context 在状态改变时的行为变化。
+
+![Image text](https://github.com/yuanhaoz/jian_zhi_offer/blob/branch-dp/src/chapter_dp/behavior/state/state_pattern_uml_diagram.jpg)

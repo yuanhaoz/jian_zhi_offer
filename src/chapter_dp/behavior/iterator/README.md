@@ -28,3 +28,5 @@ __注意事项：__ 迭代器模式就是分离了集合对象的遍历行为，
 我们将创建一个叙述导航方法的 Iterator 接口和一个返回迭代器的 Container 接口。实现了 Container 接口的实体类将负责实现 Iterator 接口。
 
 IteratorPatternDemo，我们的演示类使用实体类 NamesRepository 来打印 NamesRepository 中存储为集合的 Names。
+
+![Image text](https://github.com/yuanhaoz/jian_zhi_offer/blob/branch-dp/src/chapter_dp/behavior/iterator/iterator_pattern_uml_diagram.jpg)
