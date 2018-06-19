@@ -28,3 +28,5 @@ __注意事项：__ 对于两个独立变化的维度，使用桥接模式再适
 
 ## 实现
 我们有一个作为桥接实现的 DrawAPI 接口和实现了 DrawAPI 接口的实体类 RedCircle、GreenCircle。Shape 是一个抽象类，将使用 DrawAPI 的对象。BridgePatternDemo，我们的演示类使用 Shape 类来画出不同颜色的圆。
+
+![Image text](https://github.com/yuanhaoz/jian_zhi_offer/blob/branch-dp/src/chapter_dp/structure/bridge/bridge_pattern_uml_diagram.jpg)

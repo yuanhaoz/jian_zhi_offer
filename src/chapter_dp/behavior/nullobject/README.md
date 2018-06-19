@@ -7,3 +7,5 @@
 我们将创建一个定义操作（在这里，是客户的名称）的 AbstractCustomer 抽象类，和扩展了 AbstractCustomer 类的实体类。工厂类 CustomerFactory 基于客户传递的名字来返回 RealCustomer 或 NullCustomer 对象。
 
 NullPatternDemo，我们的演示类使用 CustomerFactory 来演示空对象模式的用法。
+
+![Image text](https://github.com/yuanhaoz/jian_zhi_offer/blob/branch-dp/src/chapter_dp/behavior/nullobject/null_pattern_uml_diagram.jpg)

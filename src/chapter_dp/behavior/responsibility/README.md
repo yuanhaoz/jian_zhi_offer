@@ -26,3 +26,5 @@ __注意事项：__ 在 JAVA WEB 中遇到很多应用。
 
 ## 实现
 我们创建抽象类 AbstractLogger，带有详细的日志记录级别。然后我们创建三种类型的记录器，都扩展了 AbstractLogger。每个记录器消息的级别是否属于自己的级别，如果是则相应地打印出来，否则将不打印并把消息传给下一个记录器。
+
+![Image text](https://github.com/yuanhaoz/jian_zhi_offer/blob/branch-dp/src/chapter_dp/behavior/responsibility/responsibility_pattern_uml_diagram.jpg)

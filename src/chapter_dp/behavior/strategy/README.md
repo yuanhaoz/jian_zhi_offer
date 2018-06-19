@@ -28,3 +28,5 @@ __注意事项：__ 如果一个系统的策略多于四个，就需要考虑使
 我们将创建一个定义活动的 Strategy 接口和实现了 Strategy 接口的实体策略类。Context 是一个使用了某种策略的类。
 
 StrategyPatternDemo，我们的演示类使用 Context 和策略对象来演示 Context 在它所配置或使用的策略改变时的行为变化。
+
+![Image text](https://github.com/yuanhaoz/jian_zhi_offer/blob/branch-dp/src/chapter_dp/behavior/strategy/strategy_pattern_uml_diagram.jpg)

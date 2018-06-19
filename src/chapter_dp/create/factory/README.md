@@ -29,3 +29,4 @@ __注意事项：__ 作为一种创建类模式，在任何需要生成复杂对
 
 FactoryPatternDemo，我们的演示类使用 ShapeFactory 来获取 Shape 对象。它将向 ShapeFactory 传递信息（CIRCLE / RECTANGLE / SQUARE），以便获取它所需对象的类型。
 
+![Image text](https://github.com/yuanhaoz/jian_zhi_offer/blob/branch-dp/src/chapter_dp/create/factory/factory.jpg)
