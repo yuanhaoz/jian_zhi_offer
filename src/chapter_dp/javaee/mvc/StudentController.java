@@ -1,5 +1,10 @@
 package chapter_dp.javaee.mvc;
 
+/**
+ * 创建控制器。
+ * @author yuanhao
+ * @date 2018/4/8 20:10
+ */
 public class StudentController {
 
     private Student model;

@@ -1,5 +1,10 @@
 package chapter_dp.javaee.mvc;
 
+/**
+ * 使用 StudentController 方法来演示 MVC 设计模式的用法。
+ * @author yuanhao
+ * @date 2018/4/8 20:10
+ */
 public class MVCPatternDemo {
 
     public static void main(String[] args) {
