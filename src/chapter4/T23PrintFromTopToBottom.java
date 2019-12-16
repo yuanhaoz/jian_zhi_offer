@@ -54,6 +54,8 @@ public class T23PrintFromTopToBottom {
      * 5   7  9  11
      * 则依次打印出8、6、10、5、3 、9、11.
      *
+     * 关键数据结构：对列
+     *
      * @param root 树的结点
      */
     public static void printFromTopToBottom(TreeNode root) {

@@ -36,14 +36,14 @@ public class T11Power {
         if (exponent < 0) {
             exp = -exponent;
         }
-        double result = Power2(base, exp); // 求幂次方
+        double result = PowerByRecursion(base, exp); // 求幂次方
         if (exp < 0) { // 指数是负数，要进行求倒数
             return 1 / result;
         }
         return result;
     }
 
-    public static double Power2(double base, int exponent) {
+    public static double PowerByRecursion(double base, int exponent) {
         // 指数为0，返回1
         if (exponent == 0) {
             return 1;
@@ -53,7 +53,7 @@ public class T11Power {
             return base;
         }
         // 递归求一半的值
-        double result = Power2(base, exponent >> 1);
+        double result = PowerByRecursion(base, exponent >> 1);
         // 求最终的值，如果是奇数就还要乘以一次底数
         result *= result;
         if ((exponent & 0x01) == 1) { // 用位与运算符代替了求余运算符（%）来判断一个数是奇数还是偶数。位运算效率比乘除法及求余运算的效率要高很多。
