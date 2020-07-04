@@ -31,7 +31,7 @@ public class T14ReorderOddEven {
             while (left < right && condition(arr, left)) {
                 left++;
             }
-            while (left < right && condition(arr, right)) {
+            while (left < right && !condition(arr, right)) {
                 right--;
             }
             if (left < right) {

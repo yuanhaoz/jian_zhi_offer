@@ -47,7 +47,8 @@ public class T22IsPopOrder {
          */
         while(popIndex < pop.length) {
             // 栈初始为空、栈顶元素不等于需要弹出的元素时：不断压入元素入栈
-            while(pushIndex < push.length && (stack.isEmpty() || stack.peek() != pop[popIndex])) { // 栈顶元素不是不要弹出的值
+            while(pushIndex < push.length && (stack.isEmpty() || stack.peek() != pop[popIndex])) {
+                // 栈顶元素不是不要弹出的值
                 stack.push(push[pushIndex]);
                 pushIndex++;
             }
